@@ -146,10 +146,10 @@
       <div style="margin-top: 15px;"></div>
       <h2 class="subtitle has-text-centered">
         We present <strong>PostCam</strong>, a framework for novel-view video
-        generation that enables post-capture editing of camera trajectories in dynamic scenes.
+        generation that <br> enables post-capture editing of camera trajectories in dynamic scenes.
       </h2>
       <div style="margin-top: 30px;"></div>
-      <img id="teaser" src="static/images/teaser.pdf" alt="PostCam Teaser" style="max-width: 100%; height: auto;">
+      <img id="teaser" src="static/images/teazer_01.png" alt="PostCam Teaser" style="max-width: 100%; height: auto;">
     </div>
   </div>
 </section>
@@ -178,130 +178,116 @@ Our code will be released publicly.
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
+<section class="hero is-small" style="margin-top: -50px;">
   <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+    <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div class="column is-">
+          <br>
+          <h2 class="title is-2">Demos</h2>
+          <h1 class="title is-5 has-text-centered">Arc Left&Right Trajectories</h1>
+          <div class="columns is-centered has-text-justified">
+            <td colspan="3">
+              <div style="text-align: center; width: 100%;">
+                <div style="display: flex; justify-content: space-between; width: 90%; margin: 0 auto;">
+                  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Source Videos</b></span>
+                  <span><b>Synthesized Videos</b></span>
+                  <span><b>Source Videos</b></span>
+                  <span><b>Synthesized Videos</b>&nbsp;</span>
+                </div>
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls poster="">
+                  <source src="static/videos/left_right.mp4" type="video/mp4">
+                </video>
+              </div>
+            </td>
+          </div>
+          <p><br></p>
+          <h1 class="title is-5 has-text-centered">Translation Up&Down Trajectories</h1>
+          <div class="columns is-centered has-text-justified">
+            <td colspan="3">
+              <div style="text-align: center; width: 100%;">
+                <div style="display: flex; justify-content: space-between; width: 90%; margin: 0 auto;">
+                  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Source Videos</b></span>
+                  <span><b>Synthesized Videos</b></span>
+                  <span><b>Source Videos</b></span>
+                  <span><b>Synthesized Videos</b>&nbsp;</span>
+                </div>
+              <video muted autoplay="autoplay" loop="loop" width="100%" preload controls poster="">
+                <source src="static/videos/up_down.mp4" type="video/mp4">
+              </video>
+              </div>
+            </td>
+          </div>
+          <p><br></p>
+          <h1 class="title is-5 has-text-centered">Zoom in / Zoom out Trajectories</h1>
+          <div class="columns is-centered has-text-justified">
+            <td colspan="3">
+              <div style="text-align: center; width: 100%;">
+                <div style="display: flex; justify-content: space-between; width: 90%; margin: 0 auto;">
+                  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Source Videos</b></span>
+                  <span><b>Synthesized Videos</b></span>
+                  <span><b>Source Videos</b></span>
+                  <span><b>Synthesized Videos</b>&nbsp;</span>
+                </div>
+              <video muted autoplay="autoplay" loop="loop" width="100%" preload controls poster="">
+                <source src="static/videos/zoom_in_out.mp4" type="video/mp4">
+              </video>
+            </div>
+            </td>
+          </div>
+          <p><br></p>
+</section>
+
+
+  <!-- Video grid single ref -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column custom-width">
+            <h2 class="title is-2">Comparisons</h2>
+
+            <div class="content has-text-justified my_link">
+              <td colspan="3">
+                <p>
+                  We compare the proposed PostCam with state-of-the-art camera-controlled video-to-video generation methods including DaS <a href="#ref-das">[1]</a>, TrajectoryCrafter <a href="#ref-trajcrafter">[4]</a>, and ReCamMaster <a href="#ref-recamaster">[5]</a>.
+                </p>
+                <!-- <p><br></p> -->
+              </td>
+
+            <div class="columns is-centered has-text-justified">
+              <td colspan="3">
+                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls poster="">
+                  <source src="static/videos/comparison.mp4" type="video/mp4">
+                </video>
+              </td>
+            </div>
+            <p><br></p>
+        </div>
+  </section>
+
+
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column custom-width">
+            <!-- <h2 class="title is-2"></h2> -->
+            <div class="content has-text-justified" style="margin-top: -0px;">
+              
+              <b>Reference:</b> <br>
+                <a name="ref-das" id="ref-das"></a>
+                [1] Gu Z, Yan R, Lu J, et al. Diffusion as shader: 3d-aware video diffusion for versatile video generation control[C]//Proceedings of the Special Interest Group on Computer Graphics and Interactive Techniques Conference Conference Papers. 2025: 1-12.<br>
+                <a name="ref-trajcrafter" id="ref-trajcrafter"></a>
+                [2] YU M, Hu W, Xing J, et al. Trajectorycrafter: Redirecting camera trajectory for monocular videos via diffusion models[J]. arXiv preprint arXiv:2503.05638, 2025.<br>
+                <a name="ref-recamaster" id="ref-recamaster"></a>
+                [3] Bai J, Xia M, Fu X, et al. Recammaster: Camera-controlled generative rendering from a single video[J]. arXiv preprint arXiv:2503.11647, 2025.<br>
+                <br>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
+    </section>
 
 
   <footer class="footer">
