@@ -25,7 +25,7 @@
 
 
   <title>PostCam: Camera-Controllable Novel-View Video Generation with Query-Shared Cross-Attention</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -152,7 +152,7 @@
        <img id="teaser" 
      src="static/images/teazer_01.png" 
      alt="PostCam Teaser" 
-     style="max-width: 150%; height: auto; position: relative; left: 50%; transform: translateX(-50%);">
+     style="max-width: 120%; height: auto; position: relative; left: 50%; transform: translateX(-50%);">
        </div>
   </div>
 </section>
@@ -167,11 +167,11 @@
         <div class="content has-text-justified">
           <p>
             We propose PostCam, a framework for novel-view video generation that enables post-capture editing of camera trajectories in dynamic scenes.
-Existing methods either rely solely on camera parameters, leading to imprecise motion control, or utilize rendered proxy videos that are vulnerable to depth estimation errors.
-In contrast, PostCam integrates both modalities via a novel query-shared cross-attention module that effectively aligns 6-DoF camera poses with 2D rendered frames in a shared feature space.
-To further enhance generation quality, we introduce a two-stage training strategy: the model first learns coarse camera control from pose inputs, then incorporates visual information to refine motion accuracy and visual fidelity.
-Experiments on both real-world and synthetic datasets show that PostCam outperforms state-of-the-art methods by over 20% in camera control precision and achieves the highest video quality.
-Our code will be released publicly.
+            Existing methods either rely solely on camera parameters, leading to imprecise motion control, or utilize rendered proxy videos that are vulnerable to depth estimation errors.
+            In contrast, PostCam integrates both modalities via a novel query-shared cross-attention module that effectively aligns 6-DoF camera poses with 2D rendered frames in a shared feature space.
+            To further enhance generation quality, we introduce a two-stage training strategy: the model first learns coarse camera control from pose inputs, then incorporates visual information to refine motion accuracy and visual fidelity.
+            Experiments on both real-world and synthetic datasets show that PostCam outperforms state-of-the-art methods by over 20% in camera control precision and achieves the highest video quality.
+            Our code will be released publicly.
           </p>
         </div>
       </div>
@@ -180,20 +180,49 @@ Our code will be released publicly.
 </section>
 <!-- End paper abstract -->
 
+  <!-- Paper poster -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-">
+            <h2 class="title is-2">Method</h2>
+            <div class="columns is-centered has-text-justified">
+              <td colspan="3">
+                <img src="static/images/framework.png" width="100%" />
+              </td>
+            </div>
+            <div class="content has-text-justified my_link">
+              <td colspan="3">
+                <p>
+                  The model stacks multiple transformer blocks along three parallel pathways. (a) The source
+                  video is first encoded into latent space and then concatenated with noised latents before entering the transformer blocks. (b) the
+                  camera parameters are processed by a lightweight encoder and injected into every block via query-shared cross-attention. (c)
+                  the rendered video iis similarly encoded into latent space; within each block, it undergoes self-attention to extract high-level
+                  visual features. An exploded view (bottom right) depicts the internal structure of a transformer block.
+                </p>
+              </td>
+            </div>
+            <p><br></p>
+          </div>
+  </section>
+  <!--End paper poster -->
 
-<section class="hero is-small demos-section" style="margin-top: -50px;">
+
+<section class="hero is-small is-light" style="margin-top: -50px;">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
-        <div class="column is-" style="max-width: 150%; width: 150%; position: relative; left: 50%; transform: translateX(-50%);">
+        <div class="column is-">
           <br>
           <br>
-          <h2 class="title is-2">Demos</h2>
+          <h2 class="title is-2 has-text-centered">Demos</h2>
+          <h2 class="title is-6">(All videos are generated based on the Wan2.1 1.3B model)</h2>
           <h1 class="title is-5 has-text-centered">Arc Right Trajectories</h1>
           <div class="columns is-centered has-text-justified">
             <td colspan="3">
               <div style="text-align: center; width: 100%;">
-                <div class="video-labels" style="display: flex; justify-content: space-between; width: 90%; margin: 0 auto;">
+                <div style="display: flex; justify-content: space-between; width: 90%; margin: 0 auto;">
                   <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Source Videos</b></span>
                   <span><b>Synthesized Videos</b></span>
                   <span><b>Source Videos</b></span>
@@ -210,7 +239,7 @@ Our code will be released publicly.
           <div class="columns is-centered has-text-justified">
             <td colspan="3">
               <div style="text-align: center; width: 100%;">
-                <div class="video-labels" style="display: flex; justify-content: space-between; width: 90%; margin: 0 auto;">
+                <div style="display: flex; justify-content: space-between; width: 90%; margin: 0 auto;">
                   <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Source Videos</b></span>
                   <span><b>Synthesized Videos</b></span>
                   <span><b>Source Videos</b></span>
@@ -227,7 +256,7 @@ Our code will be released publicly.
           <div class="columns is-centered has-text-justified">
             <td colspan="3">
               <div style="text-align: center; width: 100%;">
-                <div class="video-labels" style="display: flex; justify-content: space-between; width: 90%; margin: 0 auto;">
+                <div style="display: flex; justify-content: space-between; width: 90%; margin: 0 auto;">
                   <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Source Videos</b></span>
                   <span><b>Synthesized Videos</b></span>
                   <span><b>Source Videos</b></span>
@@ -239,20 +268,20 @@ Our code will be released publicly.
               </div>
             </td>
           </div>
-          <p><br></p>
+          <p><br></p> 
           <h1 class="title is-5 has-text-centered">Translation Down Trajectories</h1>
           <div class="columns is-centered has-text-justified">
             <td colspan="3">
               <div style="text-align: center; width: 100%;">
-                <div class="video-labels" style="display: flex; justify-content: space-between; width: 90%; margin: 0 auto;">
+                <div style="display: flex; justify-content: space-between; width: 90%; margin: 0 auto;">
                   <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Source Videos</b></span>
                   <span><b>Synthesized Videos</b></span>
                   <span><b>Source Videos</b></span>
                   <span><b>Synthesized Videos</b>&nbsp;</span>
                 </div>
-                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls poster="">
-                  <source src="static/videos/down.mp4" type="video/mp4">
-                </video>
+              <video muted autoplay="autoplay" loop="loop" width="100%" preload controls poster="">
+                <source src="static/videos/down.mp4" type="video/mp4">
+              </video>
               </div>
             </td>
           </div>
@@ -261,16 +290,16 @@ Our code will be released publicly.
           <div class="columns is-centered has-text-justified">
             <td colspan="3">
               <div style="text-align: center; width: 100%;">
-                <div class="video-labels" style="display: flex; justify-content: space-between; width: 90%; margin: 0 auto;">
+                <div style="display: flex; justify-content: space-between; width: 90%; margin: 0 auto;">
                   <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Source Videos</b></span>
                   <span><b>Synthesized Videos</b></span>
                   <span><b>Source Videos</b></span>
                   <span><b>Synthesized Videos</b>&nbsp;</span>
                 </div>
-                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls poster="">
-                  <source src="static/videos/zoomin.mp4" type="video/mp4">
-                </video>
-              </div>
+              <video muted autoplay="autoplay" loop="loop" width="100%" preload controls poster="">
+                <source src="static/videos/zoomin.mp4" type="video/mp4">
+              </video>
+            </div>
             </td>
           </div>
           <p><br></p>
@@ -278,23 +307,19 @@ Our code will be released publicly.
           <div class="columns is-centered has-text-justified">
             <td colspan="3">
               <div style="text-align: center; width: 100%;">
-                <div class="video-labels" style="display: flex; justify-content: space-between; width: 90%; margin: 0 auto;">
+                <div style="display: flex; justify-content: space-between; width: 90%; margin: 0 auto;">
                   <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Source Videos</b></span>
                   <span><b>Synthesized Videos</b></span>
                   <span><b>Source Videos</b></span>
                   <span><b>Synthesized Videos</b>&nbsp;</span>
                 </div>
-                <video muted autoplay="autoplay" loop="loop" width="100%" preload controls poster="">
-                  <source src="static/videos/zoomout.mp4" type="video/mp4">
-                </video>
-              </div>
+              <video muted autoplay="autoplay" loop="loop" width="100%" preload controls poster="">
+                <source src="static/videos/zoomout.mp4" type="video/mp4">
+              </video>
+            </div>
             </td>
           </div>
           <p><br></p>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
 
